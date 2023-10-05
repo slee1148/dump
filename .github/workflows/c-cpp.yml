@@ -1,0 +1,38 @@
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+
+class lecture {
+private:
+    string name;
+    string number;
+    string day;
+public:
+    lecture(string name, string number, string day);
+    ~lecture();
+};
+
+lecture::lecture(string n, string num, string d)
+    :name(n), number(num), day(d) {
+}
+lecture::~lecture() {
+}
+
+class time_table {
+private:
+    vector <lecture>time;
+public:
+    time_table(lecture lecture);
+};
+time_table::time_table(lecture lect) {
+    time.push_back(lect);
+}
+
+int main()
+{
+    lecture lect = lecture("Computer", "0094", "00100");
+    
+
+    return 0;
+}
